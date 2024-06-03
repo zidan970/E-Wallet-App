@@ -32,6 +32,6 @@ class Topup extends Transaction {
     // no ref, payment method dari subclass
     public void cetakInformasiTransaksi(String namaCustomer) {
         System.out.println(namaCustomer+ " topup sejumlah: " + getNominal() + " pada " + getTanggal() +
-                " dengan no. ref: " + nomorReferensi + " menggunakan: " + metodePembayaran);
+                " dengan no. ref: " + nomorReferensi + " menggunakan " + metodePembayaran);
     }
 }
