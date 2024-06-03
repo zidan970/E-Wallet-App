@@ -3,6 +3,10 @@ class Customer {
     private String alamat;
     private EWallet ewallet;
 
+    // public Customer() {
+    //     this.ewallet = new EWallet();
+    // }
+
     // set get nama
     public void setNama(String nama) {
         this.nama = nama;
