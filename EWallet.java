@@ -34,7 +34,18 @@ class EWallet {
         }
     }
 
-    // Method untuk mendapatkan daftar transaksi
+    // transfer
+    public void transfer(Customer penerima, double nominal, String tanggal) {
+        if (nominal > 0 && saldo >= nominal) {
+            saldo -= nominal;
+            penerima.getEWallet().setSaldo(penerima.getEWallet().getSaldo() + nominal);
+            transactions.add(new Transfer(nominal, tanggal, customer, penerima));
+        } else {
+            System.out.println("Nominal tidak valid. Jumlah yang Anda masukkan kurang dari Rp0,00 atau melebihi saldo.");
+        }
+    }
+
+    // daftar transaksi
     public List<Transaction> listTransactions() {
         return transactions;
     }
