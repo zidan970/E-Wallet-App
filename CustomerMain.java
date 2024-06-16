@@ -4,14 +4,14 @@ public class CustomerMain {
     public static void main(String[] args) {
         // create object
         Customer customer = new Customer();
-        customer.setNama("itadori yuji");
-        customer.setAlamat("sendai city");
+        customer.setNama("tom");
+        customer.setAlamat("new york");
         // customer.getEWallet().setSaldo(5000);
 
         // create object
         Customer customer2 = new Customer();
-        customer2.setNama("kugisaki nobara");
-        customer2.setAlamat("tokyo");
+        customer2.setNama("jennifer");
+        customer2.setAlamat("london");
 
         // object ewallet
         EWallet ewallet = new EWallet();
