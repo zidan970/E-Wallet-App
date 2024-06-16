@@ -28,7 +28,8 @@ class EWallet {
     public void topup(double nominal, String tanggal, String nomorReferensi, String metodePembayaran) {
         if (nominal > 0) {
             saldo += nominal;
-            transactions.add(new Topup(nominal, tanggal, customer, nomorReferensi, metodePembayaran));
+            Transaction newTrans = new Topup(nominal, tanggal, customer, nomorReferensi, metodePembayaran);
+            transactions.add(newTrans);
         } else {
             System.out.println("Nominal tidak valid. Silakan masukkan lebih dari Rp0,00");
         }
